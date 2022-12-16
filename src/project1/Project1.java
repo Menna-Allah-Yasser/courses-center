@@ -1,14 +1,11 @@
-
 package project1;
 
 import java.util.ArrayList;
 
-
 public class Project1 {
 
-    
     public static void main(String[] args) {
-         /*  Teacher t1 = new Teacher(1, "Ahmed");
+        /*  Teacher t1 = new Teacher(1, "Ahmed");
         t1.getId();
         t1.getTeacherName();
         t1.getCourses();*/
@@ -17,31 +14,21 @@ public class Project1 {
             Course c2 = new Course("2", "Math2");
             Course c3 = new Course("3", "Math3");
             Course c4 = new Course("4", "Math4");
-
             ArrayList<Course> list = new ArrayList();
-            list.add(c1);
             list.add(c2);
             list.add(c3);
-           // list.add(c4);
-          //  Teacher t2 = new Teacher(1, "Ahmed", list);
+            list.add(c4);
+            Student s1 = new Student("11", "mna1");
+            Student s2 = new Student("12", "mna2", list);
 
-          //  System.out.println(t2.getId());
-          //  System.out.println(t2.getTeacherName());
-          //  t2.getCourses();
-          //  c3.getTeacherOfCourse();
-            Student s1=new Student("11","mna1");
-            Student s2=new Student("12","mna2");
-            Student s3=new Student("13","mna3");
-            Student s4=new Student("14","mna4");
-            Student s5=new Student("15","mna5");
-            s1.setCourseToStudent(c4);
-            s2.setCourseToStudent(c4);
-            s3.setCourseToStudent(c4);
-            s4.setCourseToStudent(c4);
-            s5.setCourseToStudent(c4);
-          //  s1.setCourseToStudent(list);
-          //  s1.getCoursesOfStudent();
-          c4.showStudentsOfCourse();
+            s1.setCourseToStudent(c1);
+            s2.setCourseToStudent(c1);
+            s1.setCourseToStudent(list);
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println(list.get(i).getName());
+            }
+
+            c1.showStudentsOfCourse();
         } catch (Exception ex) {
             System.out.println("ex");
         }
@@ -76,5 +63,5 @@ public class Project1 {
       t4.getTeacherName();
       t4.getCourses();*/
     }
-    
+
 }
